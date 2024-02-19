@@ -30,21 +30,21 @@ module rgb_fsm(
 		if ( !resetn )
 			state <= S0;
 		else if ( push_button == 2'b01 ) begin
-		case ( state )
-	S0 : state <= S1;
-	S1 : state <= S2;
-	S2 : state <= S1;
-			default : state <= state;
-		endcase
+			case ( state )
+				S0 : state <= S1;
+				S1 : state <= S2;
+				S2 : state <= S1;
+				default : state <= state;
+			endcase
 		end
 		else if ( push_button == 2'b10 ) begin
-		case ( state )
-	   S0 : state <= S3;
-	   S1 : state <= S3;
-	   S2 : state <= S3;
-	   S3 : state <= S1;
-			default : state <= state;
-		endcase
+			case ( state )
+			   	S0 : state <= S3;
+			  	S1 : state <= S3;
+			  	S2 : state <= S3;
+			   	S3 : state <= S1;
+				default : state <= state;
+			endcase
 		end
 		else
 			state <= state;
