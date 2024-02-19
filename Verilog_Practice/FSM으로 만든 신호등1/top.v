@@ -2,15 +2,15 @@
 
 
 module top(
-    input clk,
-    input resetn,
-    input [1:0] push_n, // GPIO PUSHBUTTON
+    	input clk,
+    	input resetn,
+    	input [1:0] push_n, // GPIO PUSHBUTTON
 	output [1:0] state,
 	output [5:0] led_output
     );
     
-    wire [1:0] push;
-    assign push = ~push_n;
+    	wire [1:0] push;
+    	assign push = ~push_n;
     
    	rgb_fsm rgb_fsm( // your fsm design
 	.clk(clk),
