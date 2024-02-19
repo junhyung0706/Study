@@ -3,10 +3,10 @@
 
 module rgb_fsm(
         input clk,
-		input resetn,
-		input [1:0] push,
-		output reg [1:0] state,
-		output reg [5:0] led_output
+	input resetn,
+	input [1:0] push,
+	output reg [1:0] state,
+	output reg [5:0] led_output
     );
     
         reg [1:0] push_reg;
